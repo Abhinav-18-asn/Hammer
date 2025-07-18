@@ -19,7 +19,7 @@ html{
     
      background: #ff4800b9;
      background-image: url('/photo-1505740420928-5e560c06d30e-Photoroom.png');
-     background-position:78% 20%;
+     background-position:50% 20%;
      background-size:fit;
      background-repeat:no-repeat;
 }
@@ -29,13 +29,38 @@ html{
     margin: 1rem;
     border-radius:12px;
     padding:1rem;
-    background:#e9e0e0d2;
-    backdrop-filter: blur(0.2px);
+    background:rgba(255, 255, 255, 0.116);
+    backdrop-filter: blur(8px);
     background-image: linear-gradient(
         100deg,
         rgba(255,255,255,0.08),
-        rgba(0,0,0,0.8)   
+        rgba(0,0,0,0.1)   
     );
-    background-size: 8px;
+    background-size: 2px; 
   }
   
+  @media screen and (min-width:768px){
+    .content {
+        width: calc(100% - 8rem);
+        height:90vh;
+        margin: 4rem;
+        border-radius:12px;
+        padding:1rem;
+        background:rgba(255, 255, 255, 0.116);
+        backdrop-filter: blur(8px);
+        background-image: linear-gradient(
+            100deg,
+            rgba(255,255,255,0.08),
+            rgba(0,0,0,0.1)   
+        );
+        background-size: 2px; 
+      }    
+      html{
+    
+        background: #ff4800b9;
+        background-image: url('/photo-1505740420928-5e560c06d30e-Photoroom.png');
+        background-position:122% -110%;
+        background-size:fit;
+        background-repeat:no-repeat;
+   }
+  }
