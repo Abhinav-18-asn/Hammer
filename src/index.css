@@ -15,13 +15,55 @@ html,body{
     width:100%;
     height:100%;
 }
+body{
+    position:relative;
+}
+/*Custom Box*/
+
+
+ /* svg part*/
+.text{
+   position:absolute; 
+   width:full;
+   height:8vh;
+   left:50%;
+   top:10%;
+   transform: translate(-50%,50%);
+   display:flex; 
+   padding:0px 4px;
+   align-items:center;
+}
+
+svg path{
+    fill:transparent;
+    stroke: black;
+    stroke-width: 1;
+    stroke-dasharray:390;
+    stroke-dashoffset: 390;
+    animation:textAnimation 4s ease-in-out forwards;
+}
+@keyframes textAnimation{
+    0%{
+        stroke-dashoffset: 390;
+        fill: transparent;
+    }
+    80%{
+        fill:transparent;
+    }
+    100%{
+        fill:rgb(0, 0, 0);  
+        stroke-dashoffset: 0;
+    }
+}
+
+/*Resizes*/
 html{
     
-     background: #ff4800b9;
-     background-image: url('/photo-1505740420928-5e560c06d30e-Photoroom.png');
-     background-position:50% 20%;
-     background-size:fit;
-     background-repeat:no-repeat;
+     background: #b6b6b6;
+     background-image: url('/photo-1505740420928-5e560c06d30e-Photoroom.png'),url('/earphones.png');
+     background-position:50% -10%,-30rem 20rem;
+     background-size:fit,fit;
+     background-repeat:no-repeat, no-repeat;
 }
 .content {
     width: calc(100% - 2rem);
@@ -30,16 +72,16 @@ html{
     border-radius:12px;
     padding:1rem;
     background:rgba(255, 255, 255, 0.116);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(30px);
     background-image: linear-gradient(
         100deg,
         rgba(255,255,255,0.08),
         rgba(0,0,0,0.1)   
     );
-    background-size: 2px; 
+    background-size: 50px; 
   }
   
-  @media screen and (min-width:768px){
+  /* @media screen and (min-width:768px){
     .content {
         width: calc(100% - 8rem);
         height:90vh;
@@ -47,19 +89,44 @@ html{
         border-radius:12px;
         padding:1rem;
         background:rgba(255, 255, 255, 0.116);
-        backdrop-filter: blur(8px);
+        backdrop-filter: blur(30px);
         background-image: linear-gradient(
             100deg,
             rgba(255,255,255,0.08),
             rgba(0,0,0,0.1)   
         );
-        background-size: 2px; 
+        background-size: 80px; 
       }    
       html{
     
         background: #ff4800b9;
-        background-image: url('/photo-1505740420928-5e560c06d30e-Photoroom.png');
-        background-position:122% -110%;
+        background-image: url('/photo-1505740420928-5e560c06d30e-Photoroom.png'),url('/earphones.png');
+        background-position:122% -110%,-20rem -2rem;
+        background-size:fit;
+        background-repeat:no-repeat;
+   }
+  } */
+  @media screen and (min-width:1024px){
+    .content {
+        width: calc(100% - 8rem);
+        height:90vh;
+        margin: 4rem;
+        border-radius:12px;
+        padding:1rem;
+        background:rgba(255, 255, 255, 0.116);
+        backdrop-filter: blur(30px);
+        background-image: linear-gradient(
+            100deg,
+            rgba(255,255,255,0.08),
+            rgba(0,0,0,0.1)   
+        );
+        background-size: 80px; 
+      }    
+      html{
+    
+        background: #b6b6b6;
+        background-image: url('/photo-1505740420928-5e560c06d30e-Photoroom.png'),url('/earphones.png');
+        background-position:122% -40%,-20rem 8rem;
         background-size:fit;
         background-repeat:no-repeat;
    }
