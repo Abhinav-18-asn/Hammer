@@ -11,8 +11,6 @@ const Nav = () => {
         <div className='flex text-[9px] lg:text-xl md:text-xl md:gap-6 md:font-thin gap-3 items-center'>
           <h1>Products</h1>
           <h1>About Us</h1>
-          <h1 className='hidden md:inline '>Refurbished Products</h1>
-          <h1 className='inline md:hidden'>Refurbished...</h1>
         <IconContext.Provider value={{size:'1.5em'}}>
                    <CiShoppingCart />
                    <CiUser />

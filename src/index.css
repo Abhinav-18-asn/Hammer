@@ -18,22 +18,26 @@ html,body{
 body{
     position:relative;
 }
-/*Custom Box*/
-
-
  /* svg part*/
 .text{
    position:absolute; 
    width:full;
    height:8vh;
    left:50%;
-   top:10%;
+   top:12%;
    transform: translate(-50%,50%);
    display:flex; 
    padding:0px 4px;
    align-items:center;
 }
-
+.hmrImg{
+    position: absolute;
+    top: 10%;
+    left:-10%;
+    transform: translate(-50%, -60%);
+    max-height: 70vh;
+    z-index: -2;
+}
 svg path{
     fill:transparent;
     stroke: black;
@@ -41,6 +45,14 @@ svg path{
     stroke-dasharray:390;
     stroke-dashoffset: 390;
     animation:textAnimation 4s ease-in-out forwards;
+}
+.svgHead{
+    position:absolute;
+    left:5rem;
+    top:6rem;
+}
+.span{
+    color:rgb(255, 83, 3);
 }
 @keyframes textAnimation{
     0%{
@@ -56,19 +68,60 @@ svg path{
     }
 }
 
+/*Hero*/
+/* CSS */
+.ring1T {
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+  .ring1:hover + .ring1T {
+    opacity: 1;
+  }
+  .ring2T{
+    opacity:0;
+    transition:0.3s ease;
+  }
+  .ring2:hover + .ring2T{
+    opacity:1;
+  }
+
+  .ring3T{
+    opacity:0;
+    transition:0.3s ease;
+  }
+  .ring3:hover + .ring3T{
+    opacity:1;
+  }
+
+
+  .ring1:hover{
+    scale:1.2;
+    transition:0.3s ease-in-out;
+  }
+
+  .ring2:hover{
+    scale:1.2;
+    transition:0.3s ease-in-out;
+  }
+  .ring3:hover{
+    scale:1.2;
+    transition:0.3s ease-in-out;
+  }
+  
+  
 /*Resizes*/
 html{
     
      background: #b6b6b6;
-     background-image: url('/photo-1505740420928-5e560c06d30e-Photoroom.png'),url('/earphones.png');
-     background-position:50% -10%,-30rem 20rem;
+     background-image: url('/Headphone.png'),url('/earphones.png');
+     background-position:50% -10%,-30rem 100VH;
      background-size:fit,fit;
      background-repeat:no-repeat, no-repeat;
+     padding:1rem;
 }
 .content {
-    width: calc(100% - 2rem);
-    height:98vh;
-    margin: 1rem;
+    width:100%;
+    height:280vh;
     border-radius:12px;
     padding:1rem;
     background:rgba(255, 255, 255, 0.116);
@@ -125,7 +178,7 @@ html{
       html{
     
         background: #b6b6b6;
-        background-image: url('/photo-1505740420928-5e560c06d30e-Photoroom.png'),url('/earphones.png');
+        background-image: url('/Headphone.png'),url('/earphones.png');
         background-position:122% -40%,-20rem 8rem;
         background-size:fit;
         background-repeat:no-repeat;
