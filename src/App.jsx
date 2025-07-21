@@ -8,7 +8,7 @@ const App = () => {
     <div className='content relative'>
       <Nav/>
       <Home/>
-
+      
     </div>
   )
 }
