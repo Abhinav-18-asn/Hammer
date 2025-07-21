@@ -23,8 +23,9 @@ body{
    position:absolute; 
    width:full;
    height:8vh;
-   left:50%;
-   top:12%;
+   left:60%;
+   scale:1.2;
+   top:18%;
    transform: translate(-50%,50%);
    display:flex; 
    padding:0px 4px;
@@ -100,7 +101,7 @@ svg path{
   }
 
   .ring2:hover{
-    scale:1.2;
+    scale:0.9;
     transition:0.3s ease-in-out;
   }
   .ring3:hover{
@@ -140,14 +141,14 @@ html{
     
      background: #b6b6b6;
      background-image: url('/Headphone.png'),url('/earphones.png');
-     background-position:50% -10%,-30rem 100VH;
+     background-position:10rem -10%,-24rem 100vh;
      background-size:fit,fit;
      background-repeat:no-repeat, no-repeat;
      
 }
 .content {
     width:100%;
-    height:175vh;
+    height:168vh;
     border-radius:12px;
     padding:1rem;
     background:rgba(255, 255, 255, 0.116);
@@ -159,8 +160,8 @@ html{
     );
     background-size:5rem; 
   }
-  
-  /* @media screen and (min-width:768px){
+  /*1280 also*/
+   @media screen and (min-width:768px){
     .content {
         width: calc(100% - 8rem);
         height:90vh;
@@ -184,11 +185,11 @@ html{
         background-size:fit;
         background-repeat:no-repeat;
    }
-  } */
+  } 
   @media screen and (min-width:1024px){
     .content {
         width: calc(100%);
-        height:326vh;
+        height:342vh;
         border-radius:12px;
         background:rgba(255, 255, 255, 0.116);
         backdrop-filter: blur(10px);
@@ -212,9 +213,9 @@ html{
     position:absolute; 
     width:28vw;
     height:8vh;
-    scale:2;
-    left:70%;
-    top:13%;
+    scale:3;
+    left:85%;
+    top:38%;
     transform: translate(-50%,50%);
     display:flex; 
     padding:0px 4px;
