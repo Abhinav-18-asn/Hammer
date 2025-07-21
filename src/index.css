@@ -267,7 +267,9 @@ html{
       transform: translateX(0);
     }
   }
-
+.errh:active{
+    opacity:0.3;
+}
 
 
 
