@@ -17,7 +17,7 @@ const Footer = () => {
                 <div className='ftrr3 links w-[2rem] text-center h-[2rem] rounded-full border'><div><FaLinkedinIn className='absolute left-[50%] top-[50%] -translate-x-[50%] -translate-y-[50%]'/></div></div>
             </div>
             {/*Footer*/}
-            <div className='footRec  w-[320px] h-[128px] border '>
+            <div className='footRec overflow-hidden  w-[320px] h-[128px] border '>
                 <div className='footi text-zinc-800 flex flex-col gap-4 items-center absolute left-6 p-2'>
                     <h1 className='text-md'>HA<span style={{ color: "rgb(255, 83, 3)"}}>MM</span>ER</h1>
                     <div className='text-[12px] footi1s leading-none tracking-tight flex flex-col gap-2'>

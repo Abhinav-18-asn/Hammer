@@ -30,7 +30,7 @@ const Marque = () => {
 <div className='mark2 absolute top-[48rem]'>
         <div className="marquee-content-reverse whitespace-nowrap absolute top-[26rem] rotate-7 flex gap-10 items-center">
           {reversedMessages.concat(reversedMessages).map((m, i) => (
-            <h1 key={i} className={`${m.color} text-xl font- opacity-70 `}>
+            <h1 key={i} className={`${m.color} text-xl font-bold  `}>
               {m.text}
             </h1>
           ))}
