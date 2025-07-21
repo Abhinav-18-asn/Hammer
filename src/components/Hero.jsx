@@ -35,6 +35,7 @@ const Hero = () => {
 </p>
               </div>
         </div>
+
    <Footer/>
     </div>
   )
