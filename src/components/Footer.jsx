@@ -2,11 +2,19 @@ import React from 'react'
 import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 const Footer = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+        //   behavior: 'smooth', // for smooth scroll
+        });
+      };
+      
   return (
     <div className= 'ftr absolute w-full top-[42rem]'>
         <div>
-            <h1 className='text-center text-5xl'>HAMMER</h1>
+            <h1 className='fthm text-center text-5xl'>HAMMER</h1>
         </div>
 
         <div className='ftrc flex gap-5 absolute -left-6 top-[6rem] items-center'>
@@ -21,17 +29,17 @@ const Footer = () => {
                 <div className='footi text-zinc-800 flex flex-col gap-4 items-center absolute left-6 p-2'>
                     <h1 className='text-md'>HA<span style={{ color: "rgb(255, 83, 3)"}}>MM</span>ER</h1>
                     <div className='text-[12px] footi1s leading-none tracking-tight flex flex-col gap-2'>
-                        <h1>About Us</h1>
-                        <h1>Careers</h1>
-                        <h1>Contact</h1>
+                        <Link to='/about' onClick={scrollToTop} className='hover:text-orange-500 transition-all duration-200'>About Us</Link>
+                        <Link to='/careers' onClick={scrollToTop} className='hover:text-orange-500 transition-all duration-200'>Careers</Link>
+                        <Link to='/contact' onClick={scrollToTop} className='hover:text-orange-500 transition-all duration-200'>Contact</Link>
                     </div>
                 </div>
                 <div className='footi2 text-zinc-800 flex flex-col gap-4 items-center absolute left-40 p-2'>
                     <h1 className='text-md'>SU<span style={{ color: "rgb(255, 83, 3)"}}>PP</span>ORT</h1>
                     <div className='text-[12px] footi2s tracking-tight leading-none flex flex-col gap-2'>
-                        <h1>After Sales Service</h1>
-                        <h1>Terms Of Service</h1>
-                        <h1>Privacy Policy</h1>
+                        <Link  to='/saleService' onClick={scrollToTop} className='hover:text-orange-500 transition-all duration-200'>After Sales Service</Link>
+                        <Link to='/termService' onClick={scrollToTop} className='hover:text-orange-500 transition-all duration-200'>Terms Of Service</Link>
+                        <Link to='/privacy' onClick={scrollToTop} className='hover:text-orange-500 transition-all duration-200'>Privacy Policy</Link>
                     </div>
                 </div>
             </div>
