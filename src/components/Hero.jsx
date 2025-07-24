@@ -1,9 +1,8 @@
 import React from 'react'
-import Footer from './Footer'
 
 const Hero = () => {
   return (
-    <div className='relative '>
+    <div className='relative mt-4'>
 {/*Earphones */}
      <div className='ehs  w-[20rem] h-[20rem] border-3 absolute top-[5.7rem] rounded-full border-zinc-700'>
         <div className=' w-full h-full'>
@@ -36,7 +35,6 @@ const Hero = () => {
               </div>
         </div>
 
-   <Footer/>
     </div>
   )
 }

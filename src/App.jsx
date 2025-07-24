@@ -5,7 +5,7 @@ import Home from './components/Home'
 
 const App = () => {
   return (
-    <div className='content relative'>
+     <div className='overflow-hidden content min-h-[calc(142vh-64px)] md:min-h-[calc(119vh)] border relative p-2'>
       <Nav/>
       <Home/>
     </div>

@@ -10,6 +10,7 @@ import Contact from './components/Contact.jsx'
 import Sales from './components/Sales.jsx'
 import Terms from './components/Terms.jsx'
 import Privacy from './components/Privacy.jsx'
+import Products from './components/Products.jsx'
 
 const router =createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router =createBrowserRouter([
   {
     path:'/privacy',
     element:<Privacy/>
+  },
+  {
+    path:'/products',
+    element:<Products/>
   }
 ]);
 createRoot(document.getElementById('root')).render(
