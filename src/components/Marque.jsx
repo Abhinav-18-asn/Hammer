@@ -1,45 +1,84 @@
-import React from 'react'
+import React from "react";
+
+const quotes = [
+  "Pure sound. Perfect fit. Unmatched clarity.",
+  "Hear deeper. Feel closer. Sound perfected.",
+  "Precision audio. Sleek style. True comfort.",
+  "Immersive experience. Crystal clear.",
+  "Studio quality. Everyday comfort.",
+  "Pure sound. Bold design. Limitless vibe.",
+  "Hear deeper. Feel closer. Sound perfected.",
+  "Precision audio. Sleek style. True comfort.",
+  "Immersive experience. Crystal clear.",
+  "Studio quality. Everyday comfort.",
+  "Pure sound. Bold design. Limitless vibe.",
+  "Hear deeper. Feel closer. Sound perfected.",
+  "Precision audio. Sleek style. True comfort.",
+  "Immersive experience. Crystal clear.",
+  "Studio quality. Everyday comfort."
+];
+
 const Marque = () => {
-  const quote = [
-    { text: "Pure sound. Perfect fit. Unmatched clarity.", color: "text-white" },
-    { text: "Hear deeper. Feel closer. Sound perfected.", color: "text-white" },
-    { text: "Precision audio. Sleek style. True comfort.", color: "text-white" },
-    { text: "Immersive experience. Crystal clear.", color: "text-white" },
-    { text: "Studio quality. Everyday comfort.", color: "text-white" },
-    { text: "Pure sound. Bold design. Limitless vibe.", color: "text-white" }
-  ]
-  const reversedMessages = [...quote].reverse()
   return (
-    <div>
-<div className='mark1 md:mt-6 flex items-center '>
-<div className=" marquee-content whitespace-nowrap -rotate-6 absolute -top-42 flex gap-10 items-center">
-  {/* First set */}
-  {quote.map((message, index) => (
-    <h1 key={`first-${index}`} className={`${message.color} text-xl font-bold tracking-wide`}>
-      {message.text}
-    </h1>
-  ))}
-  {/* Duplicate for seamless loop */}
-  {quote.map((message, index) => (
-    <h1 key={`second-${index}`} className={`${message.color} text-xl font-bold tracking-wide`}>
-      {message.text}
-    </h1>
-  ))}
-</div>
-</div>
-<div className='mark2 w-[65rem] -left-[20rem] absolute top-[33rem]'>
-        <div className=" marquee-content-reverse whitespace-nowrap absolute top-[26rem] rotate-7 flex gap-10 items-center">
-          {reversedMessages.concat(reversedMessages).map((m, i) => (
-            <h1 key={i} className={`${m.color} text-xl font-bold  `}>
-              {m.text}
-            </h1>
+    <div className="relative w-full overflow-hidden py-12 max-h-screen ">
+      {/* Top Marquee */}
+      <div className="w-full flex items-center -rotate-3">
+        <div className="flex min-w-[200%] animate-marquee bg-zinc-400 p-2 gap-10 whitespace-nowrap">
+          {[...quotes, ...quotes].map((text, i) => (
+            <p
+              key={`top-${i}`}
+              className="text-white text-sm sm:text-base md:text-xl font-semibold tracking-wide"
+            >
+              {text}
+            </p>
           ))}
         </div>
       </div>
 
-</div>
+      {/* Bottom Marquee */}
+      <div className="w-full flex items-center -rotate-3 mt-8">
+        <div className="flex min-w-[200%] animate-marquee-reverse bg-zinc-300 p-2 gap-10 whitespace-nowrap">
+          {[...quotes.reverse(), ...quotes.reverse()].map((text, i) => (
+            <p
+              key={`bottom-${i}`}
+              className="text-white text-sm sm:text-base md:text-xl font-semibold tracking-wide"
+            >
+              {text}
+            </p>
+          ))}
+        </div>
+      </div>
 
-  )
-}
 
-export default Marque
+      <div className="w-full flex items-center -rotate-3 mt-10">
+        <div className="flex min-w-[200%] animate-marquee bg-zinc-400 p-2 gap-10 whitespace-nowrap">
+          {[...quotes, ...quotes].map((text, i) => (
+            <p
+              key={`top-${i}`}
+              className="text-white text-sm sm:text-base md:text-xl font-semibold tracking-wide"
+            >
+              {text}
+            </p>
+          ))}
+        </div>
+      </div>
+
+      {/* Bottom Marquee */}
+      <div className="w-full flex items-center -rotate-3 mt-8">
+        <div className="flex min-w-[200%] animate-marquee-reverse bg-zinc-300 p-2 gap-10 whitespace-nowrap">
+          {[...quotes.reverse(), ...quotes.reverse()].map((text, i) => (
+            <p
+              key={`bottom-${i}`}
+              className="text-white text-sm sm:text-base md:text-xl font-semibold tracking-wide"
+            >
+              {text}
+            </p>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
+export default Marque;

@@ -1,42 +1,48 @@
-import React from 'react'
+import { useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Hero = () => {
+  const heroRef = useRef(null)
+
+  useEffect(() => {
+    gsap.fromTo(
+      heroRef.current,
+      { opacity: 0, y: 80 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: heroRef.current,
+          start: "top 80%",
+          end: "top 60%",
+          scrub: false,
+        },
+      }
+    )
+  }, [])
+
   return (
-    <div className='relative mt-4'>
-{/*Earphones */}
-     <div className='ehs  w-[20rem] h-[20rem] border-3 absolute top-[5.7rem] rounded-full border-zinc-700'>
-        <div className=' w-full h-full'>
-              <div className='earHero w-[10rem] h-[10rem] rounded-full absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] border-zinc-700 border '>
-                 {/*image anime*/}
-        <img src="/earphones.png" alt="" className='ring1 absolute w-[5rem] left-[50%] -top-[7rem] -translate-x-[50%]' />
-                  <p className='ring1T absolute text-center left-[50%] -translate-x-[50%] top-10 text-sm w-full px-2'>Crafted for sound. Designed for you.</p>
-              </div>
-        </div>
-     </div>
-    {/*Headphones*/}
-  
-        <div className=' w-full h-full'>
-              <div className='headHero w-[10rem] h-[10rem] rounded-full absolute -bottom-[25.7rem] left-[50%] -translate-x-[50%] -translate-y-[50%]  border'>
-                 {/*image anime*/}
-        <img src="/Headphone.png" alt="" className='ring2 absolute w-[8rem] scale-70 left-[58%] top-[4rem] translate-x-[50%]' />
-                  <p className='ring2T absolute text-center left-[50%] -translate-x-[50%] top-8 text-sm w-full px-2 leading-tight'>Premium Wireless Headphones with Noise Cancellation</p>
-              </div>
-        </div>
-    
-    {/*Speakers*/}
-  
-        <div className=' w-full h-full'>
-              <div className='speakHero w-[10rem] h-[10rem] rounded-full absolute top-[15.7rem] left-[50%] -translate-x-[50%] -translate-y-[50%] border-zinc-700 border'>
-                 {/*image anime*/}
-        <img src="/Speaker.png" alt="" className='ring3 absolute w-[3rem] -left-[4rem] top-[5rem] rotate-90 -translate-x-[50%]' />
-                  <p className='ring3T absolute text-center left-[50%] -translate-x-[50%] top-10 text-sm w-full px-2'>Fill your room with immersive sound.
-
-</p>
-              </div>
-        </div>
-
-    </div>
+    <section
+      data-scroll-section
+      className="min-h-screen flex flex-col items-center justify-center px-6 text-center relative"
+    >
+      <h1
+        ref={heroRef}
+        className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-bold leading-tight text-zinc-600"
+      >
+        Redefine Your <span className="text-orange-600">Audio</span> Experience
+      </h1>
+      <p className="mt-6 max-w-2xl text-base md:text-lg lg:text-xl text-gray-600">
+        Discover immersive sound with precision-crafted headphones. Built for audiophiles and casual listeners alike.
+      </p>
+    </section>
   )
+  
 }
 
 export default Hero

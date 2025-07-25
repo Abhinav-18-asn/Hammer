@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 @font-face {
     font-family: 'MyFont';
     src: url('/Michroma-Regular.ttf') format('truetype');
@@ -15,11 +16,7 @@ html,body{
     width:100%;
     height:100%;
 }
-body{
-    position:relative;
-    overflow-x: hidden;
-}
- /* svg part*/
+
  .errSvg{
     position:absolute;
     top:50%;
@@ -62,7 +59,7 @@ body{
     stroke-width: 1;
     stroke-dasharray: 200;
     stroke-dashoffset:200;
-    animation: overlayAnimation 20s ease-in-out infinite;
+    animation: overlayAnimation 20s linear infinite;
   }
   
 svg path{
@@ -93,51 +90,14 @@ svg path{
     0% {
       stroke-dashoffset: 2000;
     }
-    /* 50% {
-      stroke-dashoffset: 0;
-    } */
+  
     100% {
       stroke-dashoffset: -2000;
     }
   }
-/*Hero*/
-/* CSS */
-.ring1T {
-    opacity: 0;
-    transition: 0.3s ease;
-  }
-  .ring1:hover + .ring1T {
-    opacity: 1;
-  }
-  .ring2T{
-    opacity:0;
-    transition:0.3s ease;
-  }
-  .ring2:hover + .ring2T{
-    opacity:1;
-  }
-  .ring3T{
-    opacity:0;
-    transition:0.3s ease;
-  }
-  .ring3:hover + .ring3T{
-    opacity:1;
-  }
-  .ring1:hover{
-    scale:1.2;
-    transition:0.3s ease-in-out;
-  }
-  .ring2:hover{
-    scale:0.9;
-    transition:0.3s ease-in-out;
-  }
-  .ring3:hover{
-    scale:1.2;
-    transition:0.3s ease-in-out;
-  } 
-/*Resizes*/
+
 body{
-     background: #b6b6b6;
+     background: #f5f3f3;
 }
 
   .mark1{
@@ -184,4 +144,32 @@ body{
   }
 .errh:active{
     opacity:0.3;
+}
+
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 17s linear infinite;
 }
